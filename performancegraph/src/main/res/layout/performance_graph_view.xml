@@ -1,0 +1,257 @@
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <include
+            layout="@layout/performance_shimmer_card"
+            android:visibility="gone" />
+        <!--LINE GRAPH-->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/lineChartCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_small"
+            android:visibility="visible"
+            app:cardBackgroundColor="@color/card_background"
+            app:cardCornerRadius="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/margin_vsmall"
+                android:paddingRight="@dimen/margin_vsmall"
+                android:paddingBottom="@dimen/margin_small">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_small"
+                    android:layout_marginRight="@dimen/margin_small"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_small"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/tv_performance"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_toStartOf="@+id/LLViewAllLineGraphs"
+                            android:ellipsize="marquee"
+                            android:fadingEdge="horizontal"
+                            android:fontFamily="@font/montserrat_bold"
+                            android:marqueeRepeatLimit="marquee_forever"
+                            android:scrollHorizontally="true"
+                            android:singleLine="true"
+                            android:text="@string/performance"
+                            android:textColor="@color/common_text_color"
+                            android:textSize="@dimen/_16ssp" />
+
+                        <!--View more-->
+                        <LinearLayout
+                            android:id="@+id/LLViewAllLineGraphs"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerInParent="true"
+                           android:foreground="?selectableItemBackground"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/tv_viewmore"
+                                android:layout_width="0dp"
+                                android:layout_height="27dp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginTop="3dp"
+                                android:layout_marginBottom="3dp"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/montserrat_regular"
+                                android:gravity="end|center"
+                                android:padding="2dp"
+                                android:text="@string/view_more"
+                                android:visibility="gone"
+                                android:textColor="@color/grayText2"
+                                android:textSize="@dimen/text12" />
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/iv_viewmore"
+                                android:layout_width="@dimen/_20sdp"
+                                android:layout_height="@dimen/_20sdp"
+                                android:layout_gravity="center_vertical"
+                                android:rotation="180"
+                                app:srcCompat="@drawable/ic_back_arrow_new"
+                                app:tint="@color/read_review_color" />
+
+                        </LinearLayout>
+                        <!--End View more-->
+
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_Range_Performance"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_small"
+                    android:layout_marginRight="@dimen/margin_small"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:text="Today 10 sept 2019"
+                    android:visibility="gone"
+                    android:textColor="@color/subtitle_label"
+                    android:textSize="@dimen/text12" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cv_yearly_performance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_small"
+                    android:foreground="?selectableItemBackground"
+                    app:cardBackgroundColor="@color/bgcolor"
+                    app:cardCornerRadius="5dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:id="@+id/tv_twelve_month"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/margin_small"
+                            android:layout_marginRight="@dimen/margin_small"
+                            android:fontFamily="@font/montserrat_medium"
+                            android:text="@string/twelve_month"
+                            android:textColor="@color/grayText2"
+                            android:textSize="@dimen/text12" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/iv_twelve_month"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_gravity="center_vertical"
+                            android:visibility="visible"
+                            app:srcCompat="@drawable/ic_arrow_right"
+                            app:tint="@color/subtitle_label" />
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <LinearLayout
+                    android:id="@+id/layout_no_performancedata"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/margin_small"
+                    android:orientation="vertical"
+                    android:visibility="visible"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:id="@+id/tv_empty_state"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:gravity="center"
+                        android:paddingTop="10dp"
+                        android:text="@string/view_the_sales_to_volume_business_analysis_for_your_outlets"
+                        android:textColor="@color/common_text_color"
+                        android:textSize="@dimen/text12" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/_10sdp">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/iv_empty_state"
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_gravity="center"
+                            app:layout_constraintDimensionRatio="H,18:12"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/no_performancegraph1" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_performancedata"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <com.github.mikephil.charting.charts.LineChart
+                        android:id="@+id/linechart"
+                        android:layout_width="match_parent"
+                        android:layout_height="250dp"
+                        android:layout_gravity="center">
+
+                    </com.github.mikephil.charting.charts.LineChart>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/saleIv"
+                            android:layout_width="13dp"
+                            android:layout_height="13dp"
+                            android:layout_marginEnd="5dp"
+                            app:srcCompat="@drawable/round_icon1"
+                            app:tint="@color/lochmara_color"/>
+
+                        <TextView
+                            android:id="@+id/tv_sale"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="15dp"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:text="@string/sales"
+                            android:textColor="@color/regent_grey"
+                            android:textSize="@dimen/_10ssp" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/txnIv"
+                            android:layout_width="13dp"
+                            android:layout_height="13dp"
+                            android:layout_marginEnd="5dp"
+                            app:srcCompat="@drawable/round_icon2"
+                            app:tint="@color/medium_sea_green_color"/>
+
+                        <TextView
+                            android:id="@+id/tv_txn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:text="@string/nooftransactions"
+                            android:textColor="@color/regent_grey"
+                            android:textSize="@dimen/_10ssp" />
+
+
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+</merge>

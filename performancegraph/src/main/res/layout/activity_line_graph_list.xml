@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ /*
+  ~  Created by Pooran Kharol on 18/2/21 6:53 PM
+  ~  Copyright (c) 2021 . All rights reserved.
+  ~  Last modified 18/2/21 5:50 PM
+  ~  */
+  -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linear_line_graph_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bgcolor"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context=".activity.ActivityLineGraphList">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/toolbar_background_white"
+        android:visibility="visible">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_45sdp"
+            android:elevation="5dp"
+            app:contentInsetLeft="0dp"
+            app:contentInsetStart="0dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/rL_Appbar2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/img_back"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                   android:foreground="?selectableItemBackground"
+                    android:padding="@dimen/_8sdp"
+                    android:scaleType="centerInside"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_back_arrow_new"
+                    app:tint="@color/toolbar_title_color_new" />
+
+                <TextView
+                    android:id="@+id/toolbar_title"
+                    style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:fontFamily="@font/montserrat_semibold"
+                    android:gravity="start"
+                    android:singleLine="false"
+                    android:text="@string/performance"
+                    android:textColor="@color/toolbar_title_color_new"
+                    android:textSize="@dimen/_14ssp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/img_back"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                   android:foreground="?selectableItemBackground"
+                    android:padding="@dimen/margin_medium"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_back" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1sdp"
+        android:background="@color/toolbar_divider" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:animateLayoutChanges="true"
+        android:background="@color/tab_layout_color"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        android:weightSum="3">
+
+        <RelativeLayout
+            android:id="@+id/RLDayTab"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:animateLayoutChanges="true"
+            android:gravity="center"
+            android:padding="@dimen/margin_medium">
+
+            <TextView
+                android:id="@+id/tv_day"
+                style="@style/TextAppearance.AppCompat.Medium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/montserrat_semibold"
+                android:gravity="center"
+                android:text="@string/day"
+                android:textColor="@color/red_green" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/margin_small"
+            android:layout_marginBottom="@dimen/margin_small"
+            android:background="@color/subtitle_label" />
+
+        <RelativeLayout
+            android:id="@+id/RLWeekTab"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:animateLayoutChanges="true"
+            android:gravity="center"
+            android:padding="@dimen/margin_medium">
+
+
+            <TextView
+                android:id="@+id/tv_week"
+                style="@style/TextAppearance.AppCompat.Medium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/montserrat_regular"
+                android:gravity="center"
+                android:text="@string/week"
+                android:textColor="@color/subtitle_label" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/margin_small"
+            android:layout_marginBottom="@dimen/margin_small"
+            android:background="@color/subtitle_label" />
+
+        <RelativeLayout
+            android:id="@+id/RLMonthTab"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:animateLayoutChanges="true"
+            android:gravity="center"
+            android:padding="@dimen/margin_medium">
+
+
+            <TextView
+                android:id="@+id/tv_month"
+                style="@style/TextAppearance.AppCompat.Medium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/montserrat_regular"
+                android:gravity="center"
+                android:text="@string/month"
+                android:textColor="@color/subtitle_label" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <include layout="@layout/layout_all_locations_new" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <include
+            layout="@layout/layout_calendar_new"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_10sdp" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="@dimen/_10sdp"
+            android:visibility="visible"
+            android:id="@+id/cv_yearly_performance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:foreground="?selectableItemBackground"
+            app:cardBackgroundColor="@color/card_background"
+            app:cardCornerRadius="@dimen/_2sdp"
+            app:cardUseCompatPadding="true">
+
+            <LinearLayout
+                android:id="@+id/linear_twelve"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/_5sdp">
+
+                <TextView
+                    android:id="@+id/tv_twelve_month"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_small"
+                    android:layout_marginRight="@dimen/margin_small"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:text="@string/twelve_month"
+                    android:textColor="@color/subtitle_label"
+                    android:textSize="@dimen/text12" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/iv_twelve_month"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_gravity="center"
+                    app:srcCompat="@drawable/ic_arrow_right"
+                    app:tint="@color/subtitle_label" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <include
+                layout="@layout/all_graph_item"
+                android:visibility="visible" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <TextView
+        android:id="@+id/tvDataNotFound"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="@string/no_data_found"
+        android:textColor="@color/title_label"
+        android:textSize="25sp"
+        android:visibility="gone" />
+
+</LinearLayout>

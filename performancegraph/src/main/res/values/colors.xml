@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="red_green">#ED232A</color>
+    <color name="tab_layout_color">#D7EDF8</color>
+    <color name="blue_green">#09E0F6</color>
+    <color name="darker_gray">#aaa</color>
+    <color name="graphline_color1">@color/lochmara_color</color>
+    <color name="graphline_color2">@color/medium_sea_green_color</color>
+    <color name="textwhite">#222222</color>
+    <color name="graphline1_1">@color/lochmara_color</color>
+    <color name="graphline1_2">#8057B102</color>
+    <color name="graphline2_1">@color/medium_sea_green_color</color>
+    <color name="graphline2_2">#80F2AB04</color>
+    <color name="text_color">#666666</color>
+    <color name="blue_color">#004C8F</color>
+    <color name="color2">#2BB2A5</color>
+    <color name="white">#FFFFFF</color>
+<!--    <color name="dark_blue_green">#7ABA3E</color>-->
+    <color name="text_color2">#eeeeee</color>
+    <color name="text_color_month">#005499</color>
+
+    <color name="performance_duration_text_color">#FFFFFF</color>
+    <color name="performance_duration_bg_color">#7ABA3E</color>
+
+</resources>

@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shadow_bg"
+    android:orientation="horizontal">
+
+    <!--<androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:cardBackgroundColor="@color/card_background"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="2dp"
+        app:cardUseCompatPadding="true">-->
+
+        <LinearLayout
+            android:id="@+id/LL_marker"
+            android:background="@drawable/white_round_corner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txt_date_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_vsmall"
+                android:fontFamily="@font/montserrat_regular"
+                android:text=""
+                android:textColor="@color/regent_grey"
+                android:textSize="@dimen/_12ssp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_vsmall"
+                android:layout_marginRight="@dimen/margin_vsmall"
+                android:layout_marginBottom="@dimen/margin_vsmall"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/iv_markerAmt"
+                    android:layout_width="8dp"
+                    android:layout_height="8dp"
+                    android:layout_marginEnd="@dimen/margin_vsmall"
+                    android:src="@drawable/round_icon1"
+                    app:tint="@color/lochmara_color"/>
+
+                <ImageView
+                    android:id="@+id/iv_rupeeAmt"
+                    android:layout_width="8dp"
+                    android:layout_height="8dp"
+                    android:layout_marginStart="-2dp"
+                    android:layout_marginBottom="-2dp"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="TODO"
+                    android:src="@drawable/ic_rupee"
+                    app:tint="@color/title_label"
+                    android:visibility="visible" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:gravity="bottom"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tvContent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:textColor="@color/oxford_blue_color"
+                        android:textSize="@dimen/_12ssp" />
+
+                    <TextView
+                        android:id="@+id/tvContent1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:textColor="@color/oxford_blue_color"
+                        android:textSize="@dimen/_10ssp" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_vsmall"
+                android:layout_marginRight="@dimen/margin_vsmall"
+                android:layout_marginBottom="@dimen/margin_vsmall"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/iv_markerCount"
+                    android:layout_width="8dp"
+                    android:layout_height="8dp"
+                    android:layout_marginEnd="@dimen/margin_vsmall"
+                    app:tint="@color/medium_sea_green_color"
+                    android:src="@drawable/round_icon2" />
+
+                <TextView
+                    android:id="@+id/txt_total_transaction"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:textColor="@color/regent_grey"
+                    android:textSize="@dimen/_12ssp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    <!--</androidx.cardview.widget.CardView>-->
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imageView"
+        android:layout_width="8dp"
+        android:layout_height="8dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center_vertical"
+        android:layout_marginRight="-5dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="TODO"
+        android:paddingBottom="10dp"
+        android:src="@drawable/ic_rupee"
+        app:tint="@color/subtitle_label"
+        android:visibility="gone" />
+
+    <TextView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:fontFamily="@font/montserrat_semibold"
+        android:paddingBottom="10dp"
+        android:singleLine="true"
+        android:text=""
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@color/subtitle_label"
+        android:textSize="10sp"
+        android:visibility="gone" />
+
+    <TextView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="3dp"
+        android:layout_marginBottom="-2dp"
+        android:fontFamily="@font/montserrat_semibold"
+        android:paddingBottom="10dp"
+        android:singleLine="true"
+        android:text=""
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@color/subtitle_label"
+        android:textSize="7sp"
+        android:visibility="gone" />
+</RelativeLayout>

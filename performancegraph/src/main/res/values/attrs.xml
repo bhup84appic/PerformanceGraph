@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <declare-styleable name="CustomPerformanceGraph">
+        <attr name="cardBackgroundColor" format="reference|color" />
+
+        <attr name="title" format="string|reference" />
+        <attr name="titleSize" format="dimension|reference" />
+        <attr name="primaryTextFont" format="reference" />
+
+        <attr name="durationText" format="string|reference" />
+        <attr name="durationTextSize" format="dimension|reference" />
+        <attr name="secondaryTextFont" format="reference" />
+
+        <attr name="primaryTextColor" format="color|reference" />
+        <attr name="secondaryTextColor" format="color|reference" />
+
+        <attr name="lineColor1" format="color|reference" />
+        <attr name="lineColor2" format="color|reference" />
+
+        <attr name="lineColor1Drawable" format="reference" />
+        <attr name="lineColor2Drawable" format="reference" />
+
+        <attr name="canShowDate" format="boolean" />
+
+    </declare-styleable>
+</resources>
